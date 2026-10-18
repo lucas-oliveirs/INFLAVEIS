@@ -46,10 +46,11 @@ p{margin:0 0 1rem;max-width:60ch}
 section{padding:4rem 0;border-top:1px solid var(--line)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.25rem;margin-top:2rem}
 .card{background:linear-gradient(180deg,#faf6f0,#f3ece4);border:1px solid var(--line);border-radius:1.25rem;padding:1.5rem;display:flex;flex-direction:column}
+.card>p.muted{min-height:5.45rem}
 .card dl{margin:1rem 0;display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;font-size:1rem}
 .card dt{color:var(--muted)}.card dd{margin:0}
 .card-details{max-width:none;margin:1rem 0 1.25rem;padding:0;border:0}
-.card-details summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none;color:var(--ink);font-size:1rem;padding:.45rem .6rem;border-radius:.55rem;transition:color .2s ease,background-color .2s ease}
+.card-details summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none;color:var(--ink);font-size:1rem;padding:.45rem 0;border-radius:.35rem;transition:color .2s ease,background-color .2s ease}
 .card-details summary::-webkit-details-marker{display:none}
 .card-details summary::after{content:"";flex:0 0 .55rem;width:.55rem;height:.55rem;margin-right:.15rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-.15rem) rotate(45deg);transition:transform .2s ease}
 .card-details[open] summary::after{transform:translateY(.1rem) rotate(225deg)}
