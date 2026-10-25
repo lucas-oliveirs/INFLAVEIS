@@ -53,12 +53,12 @@ p{margin:0 0 1rem;max-width:60ch}
 section{padding:4rem 0;border-top:1px solid var(--line)}
 .section-soft{margin:1rem 0;padding-inline:clamp(1rem,3vw,2rem);border:0;border-radius:1.25rem;background:var(--surface)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));align-items:start;gap:1.25rem;margin-top:2rem}
-.card{min-height:42.5rem;background:linear-gradient(180deg,#faf6f0,#f3ece4);border:1px solid var(--line);border-radius:1.25rem;padding:1.5rem;display:flex;flex-direction:column;transition:box-shadow .25s ease,transform .25s ease}
+.card{min-height:43rem;background:linear-gradient(180deg,#faf6f0,#f3ece4);border:1px solid var(--line);border-radius:1.25rem;padding:1.5rem;display:flex;flex-direction:column;transition:box-shadow .25s ease,transform .25s ease}
 .card:hover{box-shadow:0 12px 30px rgba(101,87,75,.16);transform:translateY(-3px)}
-.card>p.muted{min-height:5.45rem}
+.card>p.muted{display:-webkit-box;min-height:6.2rem;margin-bottom:0;overflow:hidden;font-size:1rem;line-height:1.55;-webkit-box-orient:vertical;-webkit-line-clamp:4}
 .card dl{margin:1rem 0;display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;font-size:1rem}
 .card dt{color:var(--muted)}.card dd{margin:0}
-.card-details{max-width:none;margin:auto 0 1.25rem;padding:0;border:0}
+.card-details{max-width:none;margin:1rem 0 1.25rem;padding:0;border:0}
 .card-details summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none;color:var(--ink);font-size:1rem;padding:.45rem 0;border-radius:.35rem;transition:color .2s ease,background-color .2s ease}
 .card-details summary::-webkit-details-marker{display:none}
 .card-details summary::after{content:"";flex:0 0 .55rem;width:.55rem;height:.55rem;margin-right:.15rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-.15rem) rotate(45deg);transition:transform .2s ease}
@@ -87,7 +87,8 @@ section{padding:4rem 0;border-top:1px solid var(--line)}
 @keyframes backdrop-enter{from{opacity:0}to{opacity:1}}
 .ph img{display:block;width:100%;height:100%;object-fit:cover}
 .card h3{min-height:3.4rem;margin-bottom:.45rem;font-weight:700}.card h3.empty{color:var(--muted);opacity:.7}
-.price{margin-top:0;font-family:var(--sans);font-size:1.35rem;font-weight:700;color:var(--ink)}
+.card:has(.card-details[open])>p.muted{display:block;min-height:0;overflow:visible;-webkit-line-clamp:unset}
+.price{margin-top:auto;font-family:var(--sans);font-size:1.35rem;font-weight:700;color:var(--ink)}
 .price small{font:400 .95rem var(--sans);color:var(--muted)}
 .price strong{display:block}
 .steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:2rem;margin-top:2rem}
@@ -135,10 +136,6 @@ footer{border-top:1px solid var(--line);padding:0;color:var(--muted);font-size:1
 .footer-social-link:hover .social-handle{text-decoration:underline;text-underline-offset:.2em}
 @media (prefers-reduced-motion:reduce){.btn,.header-cta,.footer-social-link,.main-nav a,.card-details summary,.logo img,.card,.photo-trigger img,.lightbox-close,#faq details,#faq details summary,.developer-credit a,.developer-credit a::after,.footer-brand,.footer-brand::after{transition:none}.btn:hover,.header-cta:hover{transform:none;box-shadow:none}.photo-lightbox[open],.photo-lightbox::backdrop{animation:none}}
 @media (max-width:760px){
-  .card{min-height:0}
-  .card>p.muted{min-height:0}
-  .card h3{min-height:0}
-  .card-details{margin:1rem 0 1.25rem}
   .topbar-inner{grid-template-columns:1fr auto;gap:.8rem}
   .main-nav{grid-column:1/-1;grid-row:2;justify-content:center;gap:.5rem 1.4rem;flex-wrap:wrap}
   .header-actions{grid-column:2;grid-row:1}
@@ -150,6 +147,9 @@ footer{border-top:1px solid var(--line);padding:0;color:var(--muted);font-size:1
   .check{align-items:flex-start}
   .hero>div:first-child{order:0}
   .hero-photo{max-width:16rem;order:1}
+}
+@media (max-width:605px){
+  .card{min-height:0}
 }
 @media (max-width:480px){
   h1{font-size:clamp(2.35rem,10vw,3.2rem)}
@@ -164,7 +164,6 @@ footer{border-top:1px solid var(--line);padding:0;color:var(--muted);font-size:1
   .hero-photo{max-width:14.5rem}
   section{padding:3rem 0}
   .grid{grid-template-columns:1fr}
-  .card>p.muted{min-height:0}
   .steps{grid-template-columns:1fr}
   .btn{width:100%;text-align:center}
   .footer-content{flex-direction:column;align-items:flex-start}
