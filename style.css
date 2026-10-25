@@ -73,20 +73,6 @@ section{padding:4rem 0;border-top:1px solid var(--line)}
 .photo-trigger{width:100%;padding:0}
 .card-details dl{margin:.8rem 0 0;grid-template-columns:auto 1fr;gap:.35rem .8rem}
 .ph{aspect-ratio:1;border-radius:.9rem;background:#fff;border:1px dashed var(--accent);display:grid;place-items:center;color:var(--muted);font:inherit;margin-bottom:1.1rem;overflow:hidden}
-.rules-section{padding-block:2.75rem}
-.rules-section h2{margin-bottom:1.5rem}
-.rules-layout{display:grid;grid-template-columns:minmax(0,1fr) 15rem;align-items:start;gap:clamp(1.5rem,4vw,3rem)}
-.rules-content>p:first-child{margin-bottom:1rem}
-.rules-content>p:last-child{margin:1rem 0 0}
-.rules-poster{width:100%;max-width:15rem;aspect-ratio:auto;margin:0 auto;padding:.65rem;border:1px solid var(--line);border-radius:.8rem;background:#fff;box-shadow:0 8px 24px rgba(101,87,75,.12);cursor:zoom-in;text-align:center}
-.rules-poster img{width:100%;height:auto;border-radius:.35rem}
-.rules-poster span{display:block;padding:.65rem .25rem .1rem;color:var(--ink);font-size:.85rem;font-weight:600}
-.rules-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin:0;padding:0;list-style:none}
-.rules-list li{display:flex;align-items:flex-start;gap:.7rem;margin:0;padding:.85rem;border:1px solid var(--line);border-radius:.75rem;background:rgba(255,255,255,.72);font-size:.95rem;line-height:1.5}
-.rules-list li:last-child{grid-column:1/-1}
-.rule-icon{display:grid;flex:0 0 1.7rem;place-items:center;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--surface-strong);color:var(--ink)}
-.rule-icon svg{width:1.05rem;height:1.05rem;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.rules-layout a{color:var(--ink);font-weight:700;text-underline-offset:.2em}
 .photo-trigger{width:100%;padding:0;cursor:zoom-in}
 .photo-trigger img{transition:transform .35s cubic-bezier(.2,.75,.25,1)}
 .photo-trigger:hover img,.photo-trigger:focus-visible img{transform:scale(1.045)}
@@ -164,12 +150,6 @@ footer{border-top:1px solid var(--line);padding:0;color:var(--muted);font-size:1
   .check{align-items:flex-start}
   .hero>div:first-child{order:0}
   .hero-photo{max-width:16rem;order:1}
-  .rules-section{padding-block:2rem}
-  .rules-layout{grid-template-columns:1fr}
-  .rules-content{order:0}
-  .rules-poster{order:1;max-width:12rem}
-  .rules-list{grid-template-columns:1fr}
-  .rules-list li:last-child{grid-column:auto}
 }
 @media (max-width:480px){
   h1{font-size:clamp(2.35rem,10vw,3.2rem)}
